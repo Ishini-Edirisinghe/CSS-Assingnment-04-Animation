@@ -1,0 +1,72 @@
+:root{
+    --box-width: 50vw;
+    --box-height: 50vh;
+}
+
+main{
+    width: var(--box-width);
+    height: var(--box-height);
+    border: 5px solid black;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+section{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    animation: slide infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+div{
+    width: var(--box-width);
+    height: var(--box-height);
+}
+
+div:first-child{
+    background-image: url("/case_5/assets/img/slide1.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+div:nth-child(2){
+    background-image: url("/case_5/assets/img/slide2.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+div:nth-child(3){
+    background-image: url("/case_5/assets/img/slide3.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+div:nth-child(4){
+    background-image: url("/case_5/assets/img/slide4.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes slide {
+    0%,20%{
+        transform: translateX(0%);
+    }
+    25%,45%{
+        transform: translateX(-25%);
+    }
+    50%,70%{
+        transform: translateX(-50%);
+    }
+    75%,100%{
+        transform: translateX(-75%);
+    }
+
+}
