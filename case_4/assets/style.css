@@ -1,0 +1,30 @@
+div{
+    width: 400px;
+    aspect-ratio: 1/1;
+
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid blue;
+    /*border-top-color: #ff253a;*/
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    animation: drop-animation 3s infinite;
+    animation-duration: 3s;
+}
+
+@keyframes drop-animation {
+    from{
+        width: 10px;
+        height: 10px;
+    }
+    to{
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+
+    }
+}
